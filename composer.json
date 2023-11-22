@@ -1,7 +1,21 @@
 {
     "name": "concept-labs/core",
     "description": "(C)oncept-Labs Core",
+    "keywords": ["php","framework","core"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Victor Galitsky",
+            "email": "concept.galitsky@gmail.com"
+        }
+    ],
     "require": {
         "php": ">=8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cl\\Core\\": "src"
+        }
     }
+
 }
