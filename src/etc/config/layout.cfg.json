@@ -1,0 +1,31 @@
+{
+    "layout": {
+        "theme":{
+            "name": "Default theme",
+            "theme": "default",
+            "path": "default" 
+        },
+        "view": {
+            "page": {
+                "type": "Cl\\Core\\View",
+                "template": "page/2column.phtml"
+            },
+            "header": {
+                "type": "Cl\\Core\\View\\Header",
+                "template": "page/header.phtml"
+            },
+            "content": {
+                "type": "Cl\\Core\\View",
+                "template": "page/content.phtml"
+            },
+            "left": {
+                "type": "Cl\\Core\\View",
+                "template": "page/left.phtml"
+            },
+            "right": {
+                "type": "Cl\\Core\\View",
+                "template": "page/right.phtml"
+            }
+        }
+    }
+}

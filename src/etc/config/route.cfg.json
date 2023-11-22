@@ -1,0 +1,28 @@
+{
+    "route": {
+        "___common": {
+            "route_index": "index",
+            "action_index": "index"
+        },
+        "index": {
+            "type": "Cl\\Core\\Route\\Index"
+        },
+        "404": {
+            "action_index": "404 index",
+            "type": "Cl\\Core\\Route\\Route404",
+            "action": {
+                "index": {
+                    "type": "Cl\\Core\\Route\\Route404\\Action\\Index"
+                }
+            },
+            "layout": {
+                "view": {
+                    "page": {
+                        "type": "Cl\\Core\\View\\View404",
+                        "template": "page/404.phtml"
+                    }
+                }
+            }
+        }
+    }
+}

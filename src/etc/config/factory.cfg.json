@@ -1,0 +1,12 @@
+{
+    "factory": {
+        "___common":{
+            "test_common": "test common"
+        },
+        "namespaces": {
+            "core": {
+                "use_type": "Cl\\Core"
+            }
+        }
+    }
+}

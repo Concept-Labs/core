@@ -1,0 +1,9 @@
+{
+    "log": {
+        "core": {
+            "file": "cl.system.log",
+            "exception": "cl.exception.log",
+            "config": "cl.config.log"
+        }
+    }
+}
