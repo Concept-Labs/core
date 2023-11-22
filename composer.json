@@ -1,5 +1,5 @@
 {
-    "name": "cl/core",
+    "name": "c/c",
     "description": "(C)oncept-Labs Core",
     "require": {
         "php": ">=8.1"
