@@ -1,5 +1,5 @@
 {
-    "name": "c/c",
+    "name": "concept-labs/core",
     "description": "(C)oncept-Labs Core",
     "require": {
         "php": ">=8.1"
