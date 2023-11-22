@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Cl\\Core\\": "src"
+            "Cl\\Core\\": "src/"
         }
     }
 
