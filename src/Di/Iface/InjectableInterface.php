@@ -1,4 +1,6 @@
 <?php
-namespace Cl\Core\Di\Iface;
+namespace Cl\Di\Iface;
 
-interface InjectableInterface {}
+interface InjectableInterface extends 
+    ReflectableInterface 
+{}

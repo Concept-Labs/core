@@ -1,9 +1,9 @@
 <?php
-namespace Cl\Core\View;
+namespace Cl\View;
 
-use Cl\Core\Factory;
-use Cl\Core\Config;
-use Cl\Core\Debug\Debug;
+use Cl\Factory;
+use Cl\Config;
+use Cl\Debug\Debug;
 
 class View {
 

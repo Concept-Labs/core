@@ -1,6 +1,6 @@
 <?php
 
-namespace Cl\Core\Log\Logger;
+namespace Cl\Log\Logger;
 
 /**
  * Describes a logger instance.

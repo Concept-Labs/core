@@ -1,5 +1,5 @@
 <?php
-namespace Cl\Core\Di;
+namespace Cl\Di;
 
 class SingletonRepository implements Iface\RepositoryInterface
 {
@@ -11,7 +11,7 @@ class SingletonRepository implements Iface\RepositoryInterface
     protected static $repositoryStorage = [];
     protected static $factory;
 
-    public function __construct($factory FactoryInterface)
+    public function __construct($factory)
     {
         static::$factory = $factory;
     }

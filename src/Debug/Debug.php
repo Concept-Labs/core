@@ -1,5 +1,5 @@
 <?php
-namespace Cl\Core\Debug;
+namespace Cl\Debug;
 
 class Debug {
     public $a;

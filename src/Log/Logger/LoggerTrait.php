@@ -1,8 +1,8 @@
 <?php
-namespace Cl\Core\Log\Logger;
+namespace Cl\Log\Logger;
 
-use Cl\Core\Log\Logger\LogLevelEnum;
-use Cl\Core\Psr\InvalidArgumentException;
+use Cl\Log\Logger\LogLevelEnum;
+use Cl\Psr\InvalidArgumentException;
 
 
 trait LoggerTrait

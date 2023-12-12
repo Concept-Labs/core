@@ -1,16 +1,18 @@
 <?php
-//PSR6
-namespace Cl\Core\Cache;
+/**
+ * @category  Library
+ * @package   Cl\Cache
+ * @author    Victor Galitsky <concept.galitsk@gmail.com>
+ * @copyright 2023 (C)oncept-labs
+ * @license   MIT 
+ */
+namespace Cl\Cache;
 
-interface CacheItemPoolInterface
+use \Psr\Cache\CacheItemPoolInterface as PsrCacheItemPoolInterface;
+
+/**
+ * {@inheritDoc}
+ */
+interface CacheItemPoolInterface extends PsrCacheItemPoolInterface
 {
-    public function getItem($key);
-    public function getItems(array $keys = array());
-    public function hasItem($key);
-    public function clear();
-    public function deleteItem($key);
-    public function deleteItems(array $keys);
-    public function save(CacheItemInterface $item);
-    public function saveDeferred(CacheItemInterface $item);
-    public function commit();
 }

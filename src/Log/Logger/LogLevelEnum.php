@@ -1,8 +1,8 @@
 <?php
 
-namespace Cl\Core\Log\Logger;
+namespace Cl\Log\Logger;
 
-use Cl\Core\Enum\EnumJsonSerializableTrait;
+use Cl\Enum\EnumJsonSerializableTrait;
 
 enum LogLevelEnum: string
 {

@@ -1,15 +1,20 @@
 <?php
-namespace Cl\Core\Config;
+namespace Cl\Config;
+
+use \Cl\Config\Node\NodeInterface;
+use \Cl\Di\Iface\InjectableInterface;
 
 class Config 
     implements 
-    \Cl\Core\Config\ConfigInterface, 
-    \Cl\Core\Factory\FactorableInterface,
-    \Cl\Core\Di\Iface\InjectableInterface
+    ConfigInterface, 
+    \Cl\Factory\FactorableInterface,
+    InjectableInterface
+    
 {
+    use \Cl\Di\AwareInjectableTrait;
     protected $rootNode;
 
-    public function __construct(\Cl\Core\Config\Node\NodeInterface $node)
+    public function __construct(NodeInterface $node)
     {
         $this->rootNode = $node;
     }
@@ -17,9 +22,11 @@ class Config
     {
         return new static(...$args);
     }
-    public function getNode(?string $path = null): \Cl\Core\Config\Node\NodeInterface
+    public function getNode(?string $path = null): NodeInterface
     {
         //@TODO
-        return $this->rootNode;
+        if ($path === null) {
+            return $this->rootNode;
+        }
     }
 }

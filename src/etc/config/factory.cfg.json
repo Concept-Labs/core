@@ -5,7 +5,7 @@
         },
         "namespaces": {
             "core": {
-                "use_type": "Cl\\Core"
+                "use_type": "Cl\Core"
             }
         }
     }

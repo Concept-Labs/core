@@ -2,7 +2,7 @@
 /**
  * Config interface
  */
-namespace Cl\Core\Config;
+namespace Cl\Config;
 
 /**
  * Config interface
@@ -19,11 +19,11 @@ interface ConfigInterface
     /**
      * Construct Config
      *
-     * @param \Cl\Core\Config\Node\NodeInterface $nodeInterface Root config Node
+     * @param \Cl\Config\Node\NodeInterface $nodeInterface Root config Node
      * 
      * @return Config
      */
-    public function __construct(\Cl\Core\Config\Node\NodeInterface $nodeInterface);
+    public function __construct(\Cl\Config\Node\NodeInterface $nodeInterface);
 
     /**
      * Get config node. 
@@ -31,17 +31,17 @@ interface ConfigInterface
      *
      * @param string|null $path path string or null for root node
      * 
-     * @return \Cl\Core\Config\Node\NodeInterface
+     * @return \Cl\Config\Node\NodeInterface
      */
-    public function getNode(?string $path = null): \Cl\Core\Config\Node\NodeInterface;
+    public function getNode(?string $path = null): \Cl\Config\Node\NodeInterface;
 
     /**
      * Get node by paths using "bubbling". Means if 
      *
      * @param string $path 
      * 
-     * @return \Cl\Core\Config\Node\NodeInterface
+     * @return \Cl\Config\Node\NodeInterface
      */
-   // public function getNodeBubble(string $path): \Cl\Core\Config\Node\NodeInterface;
+   // public function getNodeBubble(string $path): \Cl\Config\Node\NodeInterface;
 
 }

@@ -1,5 +1,5 @@
 <?php
-namespace Cl\Core\Helper;
+namespace Cl\Helper;
 
 class Helper{
 

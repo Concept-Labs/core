@@ -1,4 +1,4 @@
 <?php
-namespace Cl\Core\Psr;
+namespace Cl\Psr;
 
 class InvalidArgumentException extends \Exception {}

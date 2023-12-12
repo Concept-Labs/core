@@ -1,5 +1,5 @@
 <?php
-namespace Cl\Core\Object;
+namespace Cl\Object;
 class Storage extends \SplObjectStorage
 {
 

@@ -2,7 +2,7 @@
 /**
  * Factorable
  */
-namespace Cl\Core\Factory;
+namespace Cl\Factory;
 
 /**
  * Factorable interface
@@ -14,7 +14,7 @@ interface FactorableInterface
      *
      * @param mixed ...$args factorable object constructor arguments
      * 
-     * @return Factorable
+     * @return FactorableInterface
      */
-    public static function factory(mixed ...$args);
+    public static function factory(mixed ...$args): FactorableInterface;
 }

@@ -1,10 +1,10 @@
 <?php
-namespace Cl\Core;
+namespace Cl\;
 
-use Cl\Core\Request\Request;
-use Cl\Core\Route\Route;
+use Cl\Request\Request;
+use Cl\Route\Route;
 
-use Cl\Core\Debug\Debug;
+use Cl\Debug\Debug;
 
 
 class App
@@ -32,7 +32,7 @@ class App
 
     /**
      *
-     * @return \Cl\Core\Route\Abstract\Route
+     * @return \Cl\Route\Abstract\Route
      */
     public function prepareRoute()
     {

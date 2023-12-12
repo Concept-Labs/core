@@ -1,12 +1,12 @@
 <?php
-namespace Cl\Core\Request;
+namespace Cl\Request;
 
-use Cl\Core\Debug\Debug;
+use Cl\Debug\Debug;
 
-use Cl\Core\Config;
-use Cl\Core\Route\Abstract\Route;
-use Cl\Core\Route\Route404;
-use Cl\Core\Route\Action\Abstract\Action;
+use Cl\Config;
+use Cl\Route\Abstract\Route;
+use Cl\Route\Route404;
+use Cl\Route\Action\Abstract\Action;
 
 class Request{
     

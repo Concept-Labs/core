@@ -1,5 +1,5 @@
 <?php
-namespace Cl\Core\Route;
+namespace Cl\Route;
 
 class Route404 extends Route{
    

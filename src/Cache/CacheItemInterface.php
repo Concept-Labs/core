@@ -1,13 +1,18 @@
 <?php
-//PSR6
-namespace Cl\Core\Cache;
+/**
+ * @category  Library
+ * @package   Cl\
+ * @author    Victor Galitsky <concept.galitsk@gmail.com>
+ * @copyright 2023 (C)oncept-labs
+ * @license   MIT 
+ */
+namespace Cl\Cache;
 
-interface CacheItemInterface
+use \Psr\Cache\CacheItemInterface as PsrCacheItemInterface;
+
+/**
+ * {@inheritDoc}
+ */
+interface CacheItemInterface extends PsrCacheItemInterface
 {
-    public function getKey();
-    public function get();
-    public function isHit();
-    public function set($value);
-    public function expiresAt($expiration);
-    public function expiresAfter($time);
 }

@@ -1,5 +1,5 @@
 <?php
-namespace Cl\Core\Event;
+namespace Cl\Event;
 class EventDispatcher implements EventDispatcherInterface
 {
 

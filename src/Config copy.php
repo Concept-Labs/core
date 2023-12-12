@@ -2,12 +2,12 @@
 /**
  * Config
  */
-//namespace Cl\Core\Config;
+//namespace Cl\Config;
 
 /**
  * Undocumented class
  */
-//class Config implements Interface\Config, Cl\Core\Factory\Interface\Factorable
+//class Config implements Interface\Config, Cl\Factory\Interface\Factorable
 {
 
     const CFG_NODE_COMMON = "___common";
@@ -32,7 +32,7 @@
      * 
      * Args @param  mixed ...$args
      * 
-     * @return \Cl\Core\Config
+     * @return \Cl\Config
      */
     public static function factory(...$args)
     {

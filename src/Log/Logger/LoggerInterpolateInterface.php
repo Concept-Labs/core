@@ -1,5 +1,5 @@
 <?php
-namespace Cl\Core\Log\Logger;
+namespace Cl\Log\Logger;
 
 interface LoggerInterpolateInterface
 {

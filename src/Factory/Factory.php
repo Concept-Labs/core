@@ -2,9 +2,9 @@
 /**
  * Factory
  */
-namespace Cl\Core\Factory;
+namespace Cl\Factory;
 
-use Cl\Core\Log\Log;
+use Cl\Log\Log;
 
 /**
  * Class Factory
@@ -14,7 +14,7 @@ class Factory
     /**
      * Factoried entites
      *
-     * @var \Cl\Core\Object\Storage
+     * @var \Cl\Object\Storage
      */
     //protected static $objectStorage;
 
@@ -42,7 +42,7 @@ class Factory
      * 
      * @return mixed
      */
-    public static function factory(string $class, ...$args): \Cl\Core\Factory\FactorableInterface
+    public static function factory(string $class, ...$args): \Cl\Factory\FactorableInterface
     {
         $that = $class;
         $entity = null;

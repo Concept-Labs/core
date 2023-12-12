@@ -1,7 +1,7 @@
 <?pphp
-namespace Cl\Core\Log;
+namespace Cl\Log;
 
-class PsrLogger// extends \PSr\Log\AbstractLogger
+class PsrLogger extends \PSr\Log\AbstractLogger
 {
     public function log($level, string|\Stringable $message, array $context = []): void
     {

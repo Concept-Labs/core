@@ -1,5 +1,5 @@
 <?php
-namespace Cl\Core\Enum;
+namespace Cl\Enum;
 
 /**
  * Enum Json Serializable Trait

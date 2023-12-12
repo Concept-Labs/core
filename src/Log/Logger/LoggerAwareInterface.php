@@ -1,10 +1,10 @@
 <?php
-namespace Cl\Core\Log\Logger;
+namespace Cl\Log\Logger;
 
 /**
  * Describes a logger-aware instance.
  */
-trait LoggerAwareTrait
+interface LoggerAwareInterface
 {
     /**
      * Sets a logger instance on the object.
@@ -12,8 +12,5 @@ trait LoggerAwareTrait
      * @param LoggerInterface $logger
      * @return void
      */
-    public function setLogger(LoggerInterface $logger): void
-    {
-        $this->logger = $logger;
-    }
+    public function setLogger(LoggerInterface $logger);
 }

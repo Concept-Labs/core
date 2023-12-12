@@ -1,5 +1,5 @@
 <?php
-namespace Cl\Core\Exchange;
+namespace Cl\Exchange;
 
 trait Exchangeable {
 

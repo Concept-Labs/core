@@ -1,5 +1,5 @@
 <?php
-namespace Cl\Core\Log\Logger;
+namespace Cl\Log\Logger;
 
 trait LoggerInterpolateTrait
 {
@@ -16,7 +16,7 @@ trait LoggerInterpolateTrait
         $replace = [];
         foreach ($context as $key => $val) {
             if (!is_array($val) && (!is_object($val) || method_exists($val, '__toString'))) {
-                $replace['{' . $key . '}'] = $val;
+                $replace['{' . $key . '}'] = (string)$val;
             }
         }
         return strtr($message, $replace);

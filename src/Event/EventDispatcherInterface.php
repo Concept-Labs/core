@@ -1,6 +1,6 @@
 <?php
 //PSR-14
-namespace Cl\Core\Event;
+namespace Cl\Event;
 
 interface EventDispatcherInterface
 {

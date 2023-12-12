@@ -1,7 +1,7 @@
 <?php
-namespace Cl\Core\Config;
+namespace Cl\Config;
 
-use Cl\Core\Enum\EnumJsonSerializableTrait;
+use Cl\Enum\EnumJsonSerializableTrait;
 
 interface NodeTagEnumInterface
 {

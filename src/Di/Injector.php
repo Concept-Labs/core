@@ -1,5 +1,5 @@
 <?php
-namespace Cl\Core\Di;
+namespace Cl\Di;
 
 class Injector implements Iface\InjectorInterface
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Cl\Core\Route\Action;
+namespace Cl\Route\Action;
 
 class Action extends Abstract\Action{
     

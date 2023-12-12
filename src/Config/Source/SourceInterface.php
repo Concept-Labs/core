@@ -1,5 +1,5 @@
 <?php
-namespace Cl\Core\Config\Source;
+namespace Cl\Config\Source;
 
 interface SourceInterface
 {
@@ -9,4 +9,10 @@ interface SourceInterface
      * @return array
      */
     public function toArray(): array;
+    /**
+     * get Config JSON
+     *
+     * @return string
+     */
+    public function toJson(): string;
 }

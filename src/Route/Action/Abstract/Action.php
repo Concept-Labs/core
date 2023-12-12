@@ -1,7 +1,7 @@
 <?php
-namespace Cl\Core\Route\Action\Abstract;
+namespace Cl\Route\Action\Abstract;
 
-use Cl\Core\Debug\Debug;
+use Cl\Debug\Debug;
 
 class Action{
 

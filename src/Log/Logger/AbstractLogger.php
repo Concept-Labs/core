@@ -1,8 +1,8 @@
 <?php
-namespace Cl\Core\Log\Logger;
+namespace Cl\Log\Logger;
 
-use Cl\Core\Log\Logger\LoggerInterface;
-use Cl\Core\Log\LogLevelEnum;
+use Cl\Log\Logger\LoggerInterface;
+use Cl\Log\LogLevelEnum;
 
 abstract class AbstractLogger 
     implements 

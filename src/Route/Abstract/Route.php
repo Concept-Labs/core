@@ -1,13 +1,13 @@
 <?php
-namespace Cl\Core\Route\Abstract;
+namespace Cl\Route\Abstract;
 
-use Cl\Core\Debug\Debug;
+use Cl\Debug\Debug;
 
-use Cl\Core\Config;
-use Cl\Core\Request\Request;
+use Cl\Config;
+use Cl\Request\Request;
 
 abstract class Route 
-//implements Cl\Core\Route\Interface\Route
+//implements Cl\Route\Interface\Route
 {
     const CFG_NODE_ROUTE = 'route';
     const CFG_NODE_ROUTE_404 = '404';
