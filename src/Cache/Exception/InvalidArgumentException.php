@@ -1,6 +1,6 @@
 <?php
 /**
- * PSR-6 CacheItemInterface
+ * Implementation of PSR-6 InvalidArgumentExceptionInterface
  * 
  * @category  Library
  * @package   Cl\Cache
@@ -9,13 +9,14 @@
  * @license   MIT 
  * @link      g
  */
-namespace Cl\Cache;
 
-use \Psr\Cache\CacheItemInterface as PsrCacheItemInterface;
+namespace Cl\Cache\Exception;
+
 
 /**
  * {@inheritDoc}
  */
-interface CacheItemInterface extends PsrCacheItemInterface
+class InvalidArgumentException extends \InvalidArgumentException 
+    implements InvalidArgumentExceptionInterface
 {
 }

@@ -1,0 +1,76 @@
+namespace Cl\Config;
+
+use Cl\Closure\Closure;
+use Cl\Config\Exception\InvalidAgrumentException;
+use Cl\Config\Exception\UnableToUsePathOnDataException;
+use Traversable;
+
+/**
+ * Implementation of the ConfigNodeInterface representing a node in a configuration tree.
+ */
+class ConfigNode extends \ArrayIterator implements ConfigNodeInterface
+{
+    
+    /**
+     * {@inheritDoc}
+     */
+    public function get(\Stringable|string|callable|null $path = null, mixed $default = null): mixed
+    {
+        return is_null($path)
+            ? $this->getArrayCopy()
+            : $this->getNodeByPath(static::normalizePath($path))?->get();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function set($data): static
+    {
+        $this[]=$data;
+        //return $this = new static($data);
+        //$this->data = $value;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getNodeByPath(\Stringable|string|callable $path): ?static
+    {
+        // if (!is_array($this->getData()) || !$this->getData() instanceof \ArrayAccess) {
+        //     throw new UnableToUsePathOnDataException("Can't retrieve the node by path because data is not array or does not implements \ArryAccess  interface");
+        // }
+
+        $pathArray = explode('.', static::normalizePath($path));
+        $dataReference = $this->getArrayCopy();
+
+        foreach ($pathArray as $key) {
+            if (!isset($dataReference[$key])) {
+                return null;
+            }
+
+            $dataReference = &$dataReference[$key];
+        }
+
+        return new static($dataReference);
+    }
+
+    /**
+     * Normalize the given path.
+     *
+     * @param \Stringable|string|callable $path The path to normalize. Path can be passed as Strigable or callable type also
+     *
+     * @return string The normalized path.
+     * @throws InvalidAgrumentException If the argument is of an invalid type.
+     */
+    protected static function normalizePath(\Stringable|string|callable $path): string
+    {
+        return match (true) {
+            is_string($path) || $path instanceof \Stringable => (string) $path,
+            is_callable($path) => (string)Closure::invokeCallable($path),
+            default => throw new InvalidAgrumentException("Invalid argument was passed to ConfigNode::get()"),
+        };
+    }
+
+}

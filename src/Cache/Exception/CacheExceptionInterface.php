@@ -1,6 +1,6 @@
 <?php
 /**
- * PSR-6 CacheItemInterface
+ * PSR-6 CacheExceptionInterface
  * 
  * @category  Library
  * @package   Cl\Cache
@@ -9,13 +9,13 @@
  * @license   MIT 
  * @link      g
  */
-namespace Cl\Cache;
+namespace Cl\Cache\Exception;
 
-use \Psr\Cache\CacheItemInterface as PsrCacheItemInterface;
+use Psr\Cache\CacheException as PsrCacheExceptionInterface;
 
 /**
  * {@inheritDoc}
  */
-interface CacheItemInterface extends PsrCacheItemInterface
+interface CacheExceptionInterface extends  PsrCacheExceptionInterface
 {
 }

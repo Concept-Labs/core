@@ -7,6 +7,7 @@ namespace Cl\Enum;
 trait EnumJsonSerializableTrait
 {
     use EnumArraySerializableTrait;
+    case 
      
     /**
      * JSON serialize

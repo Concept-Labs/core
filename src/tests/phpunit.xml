@@ -1,0 +1,6 @@
+testsuites>
+        <testsuite name="Cl Test Suite">
+            <directory suffix="Test.php">./tests</directory>
+            <!--directory suffix="Test.php">./projects</directory-->
+        </testsuite>
+</testsuites>

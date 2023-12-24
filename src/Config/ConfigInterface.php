@@ -1,47 +1,65 @@
 <?php
-/**
- * Config interface
- */
+
 namespace Cl\Config;
 
+use Cl\Config\Exception\ConfigNodeNotFoundException;
+use Cl\Config\DataProvider\ConfigDataProviderInterface;
+
 /**
- * Config interface
+ * Interface for configuration management.
  */
 interface ConfigInterface
 {
-    const CFG_NODE_COMMON = "___common";
-    const CFG_NODE_DEFAULT = 'default';
-    const CFG_NODE_LAYOUT = 'layout';
-    const CFG_NODE_VIEW = 'view';
-    const CFG_NODE_TYPE = 'type';
-    const CFG_NODE_TEMPLATE = 'template';
+    /**
+     * Get a configuration value by key.
+     *
+     * @param string $path    The configuration path.
+     * @param mixed  $default The default value if the key is not found.
+     *
+     * @return mixed The configuration value.
+     * @throws ConfigNodeNotFoundException If root node not found
+     */
+    public function get(string $path, mixed $default = null);
 
     /**
-     * Construct Config
+     * Set a configuration value.
      *
-     * @param \Cl\Config\Node\NodeInterface $nodeInterface Root config Node
-     * 
-     * @return Config
+     * @param string $path  The configuration path.
+     * @param mixed  $value The configuration value.
+     *
+     * @return static
+     * @throws ConfigNodeNotFoundException If node not found
      */
-    public function __construct(\Cl\Config\Node\NodeInterface $nodeInterface);
+    public function set(string $path, mixed $value): static;
 
     /**
-     * Get config node. 
-     * {$path} is string in format "node:sub-node:sub-sub-node"
+     * Check if a configuration key exists.
      *
-     * @param string|null $path path string or null for root node
-     * 
-     * @return \Cl\Config\Node\NodeInterface
+     * @param string $path The configuration path.
+     *
+     * @return bool True if the key exists, false otherwise.
+     * @throws ConfigNodeNotFoundException If root node not found
      */
-    public function getNode(?string $path = null): \Cl\Config\Node\NodeInterface;
+    public function has(string $path): bool;
 
     /**
-     * Get node by paths using "bubbling". Means if 
+     * Remove a configuration key.
      *
-     * @param string $path 
-     * 
-     * @return \Cl\Config\Node\NodeInterface
+     * @param string $path The configuration key.
+     *
+     * @return static
+     * @throws ConfigNodeNotFoundException If root node not found
      */
-   // public function getNodeBubble(string $path): \Cl\Config\Node\NodeInterface;
+    public function remove(string $path): static;
 
+    /**
+     * Get all configuration values.
+     *
+     * @return mixed All configuration values.
+     */
+    public function all(): mixed;
+
+    public function addProvider(ConfigDataProviderInterface $provider): static;
+    public function load() : static;
+    
 }

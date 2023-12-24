@@ -1,15 +1,54 @@
 <?php
+
 namespace Cl\Config;
 
-use Cl\Config\ConfigNode\ConfigNodeInterface;
-use Cl\Config\ConfigNode\ConfigNodeAbstract;
+use Cl\Callable\Stringable\StringExtractorTrait;
 
-class ConfigNode extends ConfigNodeAbstract implements
-    ConfigNodeInterface,
-    \Cl\Factory\FactorableInterface
+/**
+ * Implementation of the ConfigNodeInterface representing a node in a configuration tree.
+ */
+class ConfigNode implements ConfigNodeInterface
 {
-    public static function factory(...$args): ConfigNode
+    use StringExtractorTrait;
+    /**
+     * Constructor.
+     *
+     * @param mixed                       $data The initial data for the node.
+     * @param string|\Stringable|callable $path The node path. 
+     *                                          Used to store path when creating instance from Config search by path
+     */
+    public function __construct(protected mixed $data, readonly protected string $path = '')
     {
-        return new static(...$args);
+        //initialization of readonly properties
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function get(mixed $default = null): mixed
+    {
+        return match (true) {
+            is_null($this->data) => $default,
+            default => $this->data,
+        };
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function set(mixed $value): static
+    {
+        $this->data = is_object($value) ? clone $value : $value;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPath(): string
+    {
+        return $this->path;
+    }
+
 }
