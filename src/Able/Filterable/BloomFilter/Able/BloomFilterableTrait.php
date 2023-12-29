@@ -111,7 +111,7 @@ trait BloomFilterableTrait
     {
         try {
 
-            $hash = call_user_func($this->bloom_hashMethod, $item);
+            $hash = $this->bloom_hashMethod($item);
 
         } catch (\Throwable $e) {
             $hashMethod = match (true) {
@@ -124,10 +124,9 @@ trait BloomFilterableTrait
         }
 
         $hash = match (true) {
-            ctype_digit($hash) => (int)$hash,
+            is_int($hash) || ctype_digit($hash) => (int)$hash,
             ctype_xdigit($hash) => hexdec($hash),
             default => throw new ErrorInHashMethodException("Hash method must return integer or hexademical"),
-            
         };
         return $hash % $this->bloom_size;
     }

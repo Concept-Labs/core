@@ -1,8 +1,10 @@
 <?php
 //PSR-14
-namespace Cl\Event;
+namespace Cl\EventDispatcher;
 
-interface StoppableEventInterface
+
+
+interface StoppableEventInterface extends \Psr\EventDispatcher\StoppableEventInterface
 {
-    public function isPropagationStopped() : bool;
+    
 }

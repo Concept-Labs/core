@@ -11,6 +11,7 @@
     ],
     "require": {
         "php": ">=8.0.0",
+        "concept-labs/cache": ">=0.0.1",
         "psr/cache": "^3.0",
         "psr/log": "^3.0"
     },
@@ -25,8 +26,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Cl\\Cache\\Test\\": "src/Cache/test/"
+            "Cl\\Core\\Test\\": "src/test/"
         }
-    },
+    }
 
 }

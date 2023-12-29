@@ -5,7 +5,6 @@ use Cl\Debug\Debug;
 
 use Cl\Config;
 use Cl\Route\Abstract\Route;
-use Cl\Route\Route404;
 use Cl\Route\Action\Abstract\Action;
 
 class Request{
