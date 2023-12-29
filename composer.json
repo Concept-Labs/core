@@ -12,7 +12,9 @@
     "require": {
         "php": ">=8.0.0",
         "concept-labs/cache": ">=0.0.1",
-        "concept-labs/event-dispatcher": ">=0.0.1"
+        "concept-labs/event-dispatcher": ">=0.0.1",
+        "concept-labs/container" : ">=0.0.1",
+        "concept-labs/config": ">=0.0.1"
     },
     "autoload": {
         "psr-4": {
