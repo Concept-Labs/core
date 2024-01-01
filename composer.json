@@ -12,8 +12,8 @@
     "require": {
         "php": "^8.0",
         "concept-labs/cache": "^1.0",
-        "concept-labs/event-dispatcher": "^1.0",
-        "concept-labs/container" : "^1.0",
+        "concept-labs/event-dispatcher": "^0.0",
+        "concept-labs/container" : "^0.0",
         "concept-labs/config": "^1.0"
     },
     "autoload": {
