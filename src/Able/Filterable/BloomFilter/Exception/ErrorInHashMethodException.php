@@ -1,6 +1,6 @@
 <?php
 namespace Cl\Able\Filterable\BloomFilter\Exception;
-class ErrorInHashMethodException extends \RuntimeException
+class ErrorInHashMethodException extends \Exception
 {
     
 }

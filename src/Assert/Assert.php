@@ -34,7 +34,7 @@ class Assert
         if ($value !== $against) {
             match (true) {
                 class_exists((string)$throw) && class_implements(\Throwable::class) => throw new ((string)$throw)(...$throwArguments),
-                default => new \RuntimeException("Assertion Failed")
+                default => new \Exception("Assertion Failed")
             };
         }
         return true;

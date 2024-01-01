@@ -1,7 +1,7 @@
 <?php 
 namespace Cl\Callable\Exception;
 
-class CallableException extends \RuntimeException implements CallableExceptionInterface
+class CallableException extends \Exception implements CallableExceptionInterface
 {
     //empty
 }

@@ -1,7 +1,7 @@
 <?php
 namespace Cl\Closure;
 
-class ClosureException extends \RuntimeException
+class ClosureException extends \Exception
 {
     
 }
