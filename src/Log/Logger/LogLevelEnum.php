@@ -14,5 +14,5 @@ enum LogLevelEnum: string
     case WARNING = 'WARNING';
     case NOTICE = 'NOTICE';
     case INFO = 'INFO';
-    case DEBUG = 'DENBUG';
+    case DEBUG = 'DEBUG';
 }
