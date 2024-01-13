@@ -29,7 +29,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Cl\\Core\\Test\\": "src/test/"
+            "Cl\\Core\\Test\\": "test/"
         }
     }
 
